@@ -10,4 +10,7 @@ def read_root():
 @app.get("/events")
 def get_all_events():
     return {"events": ["圖書館沒位子了", "學餐大排長龍"]}
-#aaaaaaaaa
+#要寫甚麼其他的 API 嗎？例如新增事件、刪除事件等等？@app.post("/events")
+def create_event(event: str):           
+    # 這裡可以加入邏輯來儲存事件，例如存到資料庫或是暫存列表
+    return {"message": f"事件 '{event}' 已新增"}                            
